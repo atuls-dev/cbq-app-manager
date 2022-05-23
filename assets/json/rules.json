@@ -1,0 +1,164 @@
+{
+  "RuleSet": [
+    {
+      "title": "ProgressMonitorView",
+      "type": "static",
+      "rules": [
+        {
+          "tags": [
+            "Membership: Breathe Life Program",
+            "Membership: CBQ Program"
+          ],
+          "memberships": ["Breathe Life Program", "Craving Crusher (Lifetime)"],
+          "tagsNOT": ["Tag5", "Tag6"],
+          "membershipsNOT": ["MSH5"],
+          "quitDateBeforeToday": true,
+          "quitDateMore": 2,
+          "quitDateLess": 300
+        },
+        {
+          "tags": ["Tag1"],
+          "memberships": ["MSH2", "MSH3"],
+          "tagsNOT": ["Tag4", "Tag6"],
+          "membershipsNOT": ["MSH9"]
+        }
+      ],
+      "errorMessages": [
+        {
+          "enabled": "yes or no",
+          "message": "You do not have access to this tool",
+          "buttonURL": "https://gobuynow.com"
+        }
+      ]
+    },
+    {
+      "title": "CravingCrusherView",
+      "type": "static",
+      "rules": [
+        {
+          "tags": ["Membership: CBQ Program"],
+          "memberships": ["Craving Crusher (Lifetime)"],
+          "tagsNOT": [],
+          "membershipsNOT": ["MSH5"],
+          "quitDateBeforeToday": true,
+          "quitDateMore": 2,
+          "quitDateLess": 3
+        },
+        {
+          "memberships": ["admin"],
+          "tags": [],
+          "tagsNOT": [],
+          "membershipsNOT": []
+        }
+      ],
+      "errorMessages": [
+        {
+          "enabled": "yes or no",
+          "message": "You do not have access to this tool",
+          "buttonURL": "https://gobuynow.com"
+        }
+      ]
+    },
+    {
+      "title": "NotebookLoggerView",
+      "type": "static",
+      "rules": [
+        {
+          "tags": ["Membership: Breathe Life Program"],
+          "memberships": ["Breathe Life Program"],
+          "tagsNOT": ["Test Not Logged In5", "Test Not Logged In6"],
+          "membershipsNOT": ["MSH5"]
+        }
+      ],
+      "errorMessages": [
+        {
+          "enabled": "yes or no",
+          "message": "You do not have access to this tool",
+          "buttonURL": "https://gobuynow.com"
+        }
+      ]
+    },
+    {
+      "title": "TipsView",
+      "type": "static",
+      "rules": [
+        {
+          "tags": ["Consumption: Logged In to Membership site"],
+          "memberships": ["Breathe Life Program"],
+          "tagsNOT": ["Test Not Logged In4"],
+          "membershipsNOT": ["MSH5"]
+        }
+      ],
+      "errorMessages": [
+        {
+          "enabled": "yes or no",
+          "message": "You do not have access to this tool",
+          "buttonURL": "https://gobuynow.com"
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Component 1",
+      "type": "dynamic",
+      "rules": [
+        {
+          "memberships": ["admin"],
+          "tags": [],
+          "tagsNOT": [],
+          "membershipsNOT": []
+        }
+      ],
+      "errorMessages": [],
+      "details": {
+        "title": "Component 1",
+        "description": "This is a Description",
+        "close": true,
+        "buttons": [
+          {
+            "type": "ok",
+            "text": "More",
+            "action": {
+              "type": "sheet",
+              "text": "Sheet Text"
+            }
+          },
+          {
+            "type": "alternative",
+            "text": "Cancel",
+            "action": {
+              "type": "close"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "title": "Dynamic Component 2",
+      "type": "dynamic",
+      "rules": [],
+      "errorMessages": ["test"],
+      "details": {
+        "title": "Component 2",
+        "description": "This is a Description",
+        "close": true,
+        "buttons": [
+          {
+            "type": "ok",
+            "text": "More",
+            "action": {
+              "type": "url",
+              "url": "https://google.com"
+            }
+          },
+          {
+            "type": "alternative",
+            "text": "Cancel",
+            "action": {
+              "type": "close"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
